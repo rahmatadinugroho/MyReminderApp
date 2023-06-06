@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dp"
+    android:paddingBottom="20dp"
+    android:paddingHorizontal="25dp"
+    android:background="@drawable/bghome"
+    tools:context=".ScheduleDetail">
+
+    <TextView
+        android:id="@+id/scheduleDetailJudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Schedule Detail"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="@color/card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleDetailJudul"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="25dp">
+
+            <!-- Schedule Name -->
+            <TextView
+                android:id="@+id/scheduleNameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Schedule name:"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/scheduleNameInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="schedule title info"
+                android:textSize="20dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleNameTitle"
+                />
+
+            <!-- Detail Schedule -->
+            <TextView
+                android:id="@+id/scheduleDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Detail schedule:"
+                android:layout_marginTop="15dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleNameInfo"
+                />
+
+            <TextView
+                android:id="@+id/scheduleDetailInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="schedule Detail info"
+                android:textSize="20dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleDetailTitle"
+                />
+
+            <!-- Schedule date -->
+            <TextView
+                android:id="@+id/scheduleDateTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Date:"
+                android:layout_marginTop="15dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleDetailInfo"
+                />
+
+            <TextView
+                android:id="@+id/scheduleDateInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="schedule Date info"
+                android:textSize="20dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleDateTitle"
+                />
+
+
+            <!-- Schedule time -->
+            <TextView
+                android:id="@+id/scheduleTimeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Time:"
+                android:layout_marginTop="15dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleDateInfo"
+                />
+
+            <TextView
+                android:id="@+id/scheduleTimeInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="schedule Date info"
+                android:textSize="20dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleTimeTitle"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Edit Button -->
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="10dp"
+        android:text="Edit"
+        android:textAllCaps="false"
+        android:textSize="25dp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/deleteBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="10dp"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:onClick="deleteRecord"
+
+        app:layout_constraintBottom_toTopOf="@+id/completeBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Complete Button -->
+    <Button
+        android:id="@+id/completeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complete"
+        android:textAllCaps="false"
+        android:textSize="25dp"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="10dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/Blue"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

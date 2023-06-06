@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddScheduleActivity">
+
+ <TextView
+     android:id="@+id/Addtitle"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="Add Schedule"
+     android:textSize="40dp"
+     android:textStyle="bold"
+     android:textColor="@color/Blue"
+     android:layout_margin="20dp"
+
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     />
+
+    <!-- Schedule Name Form    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule Name"
+        android:textStyle="bold"
+        android:paddingLeft="30dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/schedule_name"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/schedule_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="30dp"
+        app:hintTextColor="@color/Blue"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Addtitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_schedule_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Schedule Name"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Schedule Detail Form    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule Details"
+        android:textStyle="bold"
+        android:paddingLeft="30dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/schedule_detail"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/schedule_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="30dp"
+
+        app:hintTextColor="@color/Blue"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_schedule_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Detail"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Schedule Date Picker   -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textStyle="bold"
+        android:paddingLeft="30dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/schedule_date"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/schedule_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="30dp"
+        app:hintTextColor="@color/Blue"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_detail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_schedule_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date"
+            />
+        <Button
+            android:id="@+id/btndatepick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/Blue"
+            android:text="pick date"
+
+            android:layout_marginLeft="250dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Schedule Time Form -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textStyle="bold"
+        android:paddingLeft="30dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/schedule_time"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/schedule_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintTextColor="@color/Blue"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_date">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_schedule_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Time"
+            />
+        <Button
+            android:id="@+id/btntimepick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/Blue"
+            android:text="pick time"
+
+            android:layout_marginLeft="250dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:backgroundTint="@color/Blue"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
